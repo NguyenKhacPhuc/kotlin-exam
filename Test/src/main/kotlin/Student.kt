@@ -1,10 +1,13 @@
 class Student(
-    private val name: String,
-    private val age: Int,
+    val name: String,
+    val age: Int,
     val roomNumber: Int,
-    private val gradeLevel: Int
-){
+    val gradeLevel: Int
+): Resident(){
     fun displayInfo(): Unit {
         println("$name $age $roomNumber $gradeLevel")
+    }
+    override fun checkIn(){
+        println("Student checked in")
     }
 }
